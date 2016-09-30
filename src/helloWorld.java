@@ -11,9 +11,4 @@ public static int addOperation(int a, int b){
     return total; 
 
     } 
-public static int minusOperation(int a, int b) {
-    int total;
-    total = a-b; 
-    return total; 
-} 
 }
