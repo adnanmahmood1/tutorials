@@ -12,7 +12,7 @@ public static int addOperation(int a, int b){
 
     } 
 public static int minusOperation(int a, int b) {
-    int total;
+    int totalAmount;
     total = a-b; 
     return total; 
 } 
