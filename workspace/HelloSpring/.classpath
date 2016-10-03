@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="C:/spring/libs/spring-webmvc-4.3.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/spring/libs/spring-webmvc-portlet-4.3.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="C:/spring/libs/spring-websocket-4.3.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/myProject/commons-logging-1.2/commons-logging-1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
