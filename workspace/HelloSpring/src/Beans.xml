@@ -2,11 +2,13 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
-	default-init-method="init" 
-	default-destroy-method="destroy">
-	  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!-- default-init-method="init" 
+	default-destroy-method="destroy"  -->
+	
+	
  <bean id="helloWorld" class="com.tutorialpoint.HelloWorld">
        <property name="message" value="Hello Adnan!"/>
    </bean>
@@ -15,6 +17,59 @@
    		<property name="car" value="VW Golf TSI 2.0 R"/>
    </bean>
     
-    <bean class="com.tutorialpoint.InitHelloWorld" />
+    <!--   <bean class="com.tutorialpoint.InitHelloWorld" /> -->
+    
+    <bean id="beanTemplate" abstract="true">
+    	<property name="message1" value="Hello World Temp!"/>
+    	<property name="message2" value="Hello Second World Temp"/>
+    	<property name="message3" value="Namaste India! Temp"/>    
+    </bean>
+    
+   <!--  <bean id="helloIndia" class="com.tutorialpoint.HelloIndia" parent="beanTemplate">
+    
+    </bean>
+     
+    <bean id="helloIndia" class="com.tutorialpoint.HelloIndia"
+    	p:message1="Hello P namespace"
+    	p:message2="Hello P namespace"
+    	p:message3="hello p namespace" /> -->
+    
+    <!--  
+    <bean id="helloWorld3" class="com.tutorialpoint.HelloWorld3" parent="beanTemplate"> 
+    
+    	<property name="message2" value="Hello Second World"/> 
+    </bean>
+    
+    
+	  
+       
+    <bean id="textEditor" class="com.tutorialpoint.TextEditor">
+    	<constructor-arg ref="spellChecker"/>
+    </bean>
+   <bean id="spellChecker" class="com.tutorialpoint.SpellChecker">
+    </bean>
+     -->
+    
+	 <bean id="textEditor2" class="com.tutorialpoint.TextEditor2">
+    	<property name="spellChecker2">
+    		<bean id="spellChecker" class="com.tutorialpoint.SpellChecker2"/>
+    	</property>
+    </bean>
+    
+  <!--   <bean id="spellChecker2" class="com.tutorialpoint.SpellChecker2">  
+    </bean>  -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   <!--  <bean id="helloIndia" class="com.tutorialpoint.HelloIndia" parent="helloWorld3">
+    	<property name="message1" value="Hello India!"/>
+    	<property name="message3" value = "Namaste India!"/>
+     </bean>  -->
 </beans>
   
