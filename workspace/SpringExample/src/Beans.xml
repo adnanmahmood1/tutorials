@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    
+    <!--  Definition for javaCollection -->
+    <bean id="javaCollection" class="com.tutorialpoint.JavaCollections">
+    
+    	<!--  results in a setAddressList call -->
+    	<property name="addressList">
+    		<list>
+    			<value> INDIA</value>
+    			<value> Germay</value>
+    			<value> United States</value>
+    			<value> United Kingdom</value>
+    		</list>
+    	</property>
+    	
+    	<!-- results in a setAddressSet call -->
+    	<property name="addressSet"> 
+    		<set>
+    			<value> France</value>
+    			<value> Spain</value>
+    			<value> Germany</value>
+    			<value> Italy</value>
+    		</set>
+    	</property>
+    	
+    	<!--  results in a setAddressMap call -->
+		<property name="addressMap">
+			<map>
+				<entry key="1" value="Africa"/>
+				<entry key="2" value="Peru"/>
+				<entry key="3" value="Brazil"/>
+				<entry key="4" value="China"/>
+			</map>
+		</property>    
+
+	<!--  result in a setAddressProps call -->
+    	<property name="addressProp">
+    		<props>
+    			<prop key="one">Iceland</prop>
+    			<prop key="two">Norway</prop>
+    			<prop key="three">Denmark</prop>
+    			<prop key="four">Sweden</prop>
+    		</props>
+    	</property>
+    
+    </bean>
+    
+    
+    </beans>
+    
+    
+   
