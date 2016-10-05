@@ -26,4 +26,11 @@ public class BannerMessage{
 		return visibility; 
 	}
 	
+	public void init() {
+		System.out.println("Creating BannerMessage Bean");
+	}
+	
+	public void destroy(){
+		System.out.println("Deleting BannerMessage Bean");
+	}
 }

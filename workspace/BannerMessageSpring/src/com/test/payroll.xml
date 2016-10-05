@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<PAYROLL>
-	<VISIBILITY>TRUE</VISIBILITY>
-	<BANNERMESSAGE>Next Pay date is 20th Oct </BANNERMESSAGE>
-	<HOMEMESSAGE>Next Pay date is 20th Oct</HOMEMESSAGE>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><PAYROLL>
+	<VISIBILITY>true</VISIBILITY>
+	<BANNERMESSAGE>Changes to HROnline is currently on lockdown to complete relevant payroll processing activities.  Any changes made to your personal information will not be uploaded until 6th Oct</BANNERMESSAGE>
+	<HOMEMESSAGE>We are on lockdown due to payroll processing </HOMEMESSAGE>
 </PAYROLL>

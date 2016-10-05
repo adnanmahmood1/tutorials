@@ -1,20 +1,31 @@
 package com.test;
+import java.util.Properties;
+import java.util.Scanner;
+import com.test.Display; 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 public class MainApp{
 	
 	public static void main(String[] args){
+
 		
-		BannerMessage banner = BannerUtil.readXMLFile(); 
+		AbstractApplicationContext context = 
+				new ClassPathXmlApplicationContext("Beans.xml"); 
 		
-		if (banner.getVisibility()){
-			System.out.println("Message status : " + banner.getVisibility());
-			System.out.println(banner.getHomepageMessage());
-			System.out.println(banner.getScrollingMessage());
-		}
-		else {
-			System.out.print("Message status : " + banner.getVisibility());
-		}
+		BannerUtil bannerUtil = (BannerUtil) context.getBean("bannerUtil");
+		BannerMessage banner= (BannerMessage) context.getBean("bannerMessage");
+		UserChange change = (UserChange) context.getBean("userChange"); 
+		Display dis = (Display) context.getBean("displayBean"); 
+		
+		bannerUtil.readXMLFile();
+		dis.checkDisplay();
+		change.newEntry(); 
+		bannerUtil.updateXML();
+		dis.checkDisplay();
+			
+		context.registerShutdownHook();
 	}
-	
-	
 }
